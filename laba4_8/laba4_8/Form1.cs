@@ -41,5 +41,10 @@ namespace laba4_8
         {
             webBrowser1.Stop();
         }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            webBrowser1.Navigate(toolStripTextBox1.Text);
+        }
     }
 }
