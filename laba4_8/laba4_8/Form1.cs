@@ -46,5 +46,33 @@ namespace laba4_8
         {
             webBrowser1.Navigate(toolStripTextBox1.Text);
         }
+
+        private void openToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult result;
+            result = openFileDialog1.ShowDialog();
+            if (result == System.Windows.Forms.DialogResult.OK)
+                webBrowser1.Navigate(openFileDialog1.FileName);
+        }
+
+        private void printToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            webBrowser1.ShowPrintDialog();
+        }
+
+        private void printPreviewToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            webBrowser1.ShowPrintPreviewDialog();
+        }
+
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            webBrowser1.ShowSaveAsDialog();
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
