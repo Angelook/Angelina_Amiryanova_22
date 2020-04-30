@@ -26,14 +26,20 @@ namespace laba_6
 
         private void button1_Click(object sender, EventArgs e)
         {
-            u.Change(textBox1.Text);
-            MessageBox.Show("Пароль изменен");
-            Application.Exit();
+            if (u.Check(textBox1.Text, textBox2.Text) != "Error")
+            {
+                this.Hide();
+                Form2 f2 = new Form2();
+                f2.Text = u.Check(textBox1.Text, textBox2.Text);
+                f2.Show();
+            }
+            else MessageBox.Show("Логин и пароль введены неверно");
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            textBox1.Text = "";
+            textBox2.Text = "";
         }
     }
 }

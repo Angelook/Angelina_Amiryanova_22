@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace kr_vp_1
+namespace laba_6
 {
-    public partial class FormAddStudent : Form
+    public partial class Form2 : Form
     {
-        public FormAddStudent()
+        public Form2()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
