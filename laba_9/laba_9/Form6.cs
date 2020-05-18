@@ -90,5 +90,10 @@ namespace laba_9
         {
             this.Close();
         }
+
+        private void booksDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
