@@ -1,0 +1,22 @@
+CREATE TABLE Whom
+(Code_w int NOT NULL primary key,
+Name_w varchar(50) NOT NULL,
+ad_w text NOT NULL);
+    
+CREATE TABLE Fromm(
+Code_f int NOT NULL primary key,
+Name_f varchar(50) NOT NULL,
+ad_f text NOT NULL);
+
+CREATE TABLE messagee
+(Code_f int NOT NULL,
+Code_w int NOT NULL,
+Texxt text);
+
+Alter Table messagee add
+Foreign Key (Code_w)
+References Whom(Code_w);
+
+Alter Table messagee add
+Foreign Key (Code_f)
+References Fromm(Code_f);
