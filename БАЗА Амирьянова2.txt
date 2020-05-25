@@ -1,0 +1,139 @@
+	CREATE TABLE Student(
+	n_stud int NOT NULL primary key,
+	surname_s text NOT NULL,
+	name_s text NOT NULL,
+	lastname_s text NOT NULL,
+	education text NOT NULL,
+	date_s date,
+	phone_s text NOT NULL,
+	e_mail text NOT NULL,
+	genre text NOT NULL,
+	name_art text NOT NULL,
+	n_staff int );
+	
+	CREATE TABLE Staff(
+	n_staff int NOT NULL primary key,
+	surname_st text NOT NULL,
+	name_st text NOT NULL,
+	lastname_st text NOT NULL,
+	date_st date,
+	phone_st text NOT NULL,
+	rolle text,
+	code text NOT NULL);
+	
+	Alter Table Student add
+	Foreign Key (n_staff)
+	References Staff(n_staff);
+
+	
+INSERT INTO Staff (n_staff, surname_st, name_st, lastname_st, date_st, phone_st, rolle, code)
+VALUES (1, 'Шатохин','Артем', 'Сергеевич', '1991-06-01', '+7 (357) 456-66-11', 'Администратор', 'depo');
+
+INSERT INTO Staff (n_staff, surname_st, name_st, lastname_st, date_st, phone_st, rolle, code)
+VALUES (2, 'Голубин','Глеб', 'Геннадьевич', '1996-01-30', '+7 (357) 456-88-00', 'Администратор', 'pharaoh');
+
+INSERT INTO Staff (n_staff, surname_st, name_st, lastname_st, date_st, phone_st, rolle, code)
+VALUES (3, 'Смирнов','Александр', 'Александрович', '1994-07-04', '+7 (357) 456-06-01', 'Администратор', 'gone');
+
+INSERT INTO Staff (n_staff, surname_st, name_st, lastname_st, date_st, phone_st, rolle, code)
+VALUES (4, 'Амирьянова','Ангелина', 'Ахметбековна', '1999-10-14','+7 (897) 456-66-71', 'Регистратор', 'angelook');
+
+INSERT INTO Staff (n_staff, surname_st, name_st, lastname_st, date_st, phone_st, rolle, code)
+VALUES (5, 'Пантелимонова','Карина', 'Валерьевна', '1999-07-26', '+7 (577) 456-66-12', 'Регистратор', 'karinana');
+
+INSERT INTO Staff (n_staff, surname_st, name_st, lastname_st, date_st, phone_st, rolle, code)
+VALUES (6, 'Абдуллина','Элина', 'Альбертовна', '1999-02-23', '+7 (123) 489-86-10', 'Администратор', 'aelina');
+
+INSERT INTO Staff (n_staff, surname_st, name_st, lastname_st, date_st, phone_st, rolle, code)
+VALUES (7, 'Мисбахова','Фарида', 'Фаридовна', '1999-11-26', '+7 (123) 489-77-77', 'Администратор', 'karalek');
+
+INSERT INTO Staff (n_staff, surname_st, name_st, lastname_st, date_st, phone_st, rolle, code)
+VALUES (8, 'Антипова','Анастасия', 'Александровна', '1999-11-12', '+7 (343) 559-85-15', 'Администратор', 'anastasia');
+
+
+INSERT INTO Student (n_stud, surname_s, name_s, lastname_s, education, date_s, phone_s, e_mail, genre, name_art,   n_staff)
+VALUES (1, 'Амирьянова','Лилиана', 'Ахметбековна', 'КГМУ', '2003-08-22', '+7 (343) 555-55-22', 'a.amiryanova@mail.ru', 'фотография', 'шанс',1);
+
+INSERT INTO Student (n_stud, surname_s, name_s, lastname_s, education, date_s, phone_s, e_mail, genre, name_art, n_staff)
+VALUES (2, 'Уварова','Ксения', 'Раилевна', 'КНИТУ-КХТИ', '1999-06-22', '+7 (343) 555-00-00', 'an.amiryanova@mail.ru', 'фотография', 'счастье',1);
+
+INSERT INTO Student (n_stud,surname_s, name_s, lastname_s, education, date_s, phone_s, e_mail, genre, name_art, n_staff)
+VALUES (3, 'Ермолаева','Регина', 'Павловна', 'КНИТУ-КХТИ', '1997-03-10', '+7 (343) 333-55-22', 'fnn.4371-211@mail.ru', 'живопись','солнце',1);
+
+INSERT INTO Student (n_stud,surname_s, name_s, lastname_s, education, date_s, phone_s, e_mail, genre, name_art, n_staff)
+VALUES (4, 'Астафьев','Руслан', 'Дмитриевич', 'КГАСУ', '1999-06-02', '+7 (311) 555-15-92', 'ruslaaan@mail.ru', 'смешанная техника','лестница',1);
+
+INSERT INTO Student (n_stud,surname_s, name_s, lastname_s, education, date_s, phone_s, e_mail, genre, name_art, n_staff)
+VALUES (5, 'Быков','Максим', 'Владимирович', 'КГЭУ', '1999-09-12', '+7 (001) 115-15-92', 'makss@yandex.ru', 'цифровое искусство','взгляд',1);
+
+INSERT INTO Student (n_stud,surname_s, name_s, lastname_s, education, date_s, phone_s, e_mail, genre, name_art, n_staff)
+VALUES (6, 'Валеев','Дмитрий', 'Анатольевич', 'КАЗГИК', '1999-11-12', '+7 (001) 006-15-62', 'diimaa@yandex.ru', 'живопись','единороги',1);
+
+INSERT INTO Student (n_stud,surname_s, name_s, lastname_s, education, date_s, phone_s, e_mail, genre, name_art, n_staff)
+VALUES (7, 'Губайдуллин','Ранис', 'Булатович', 'КФУ', '1998-10-12', '+7 (111) 115-15-22', 'ran_s@yandex.ru', 'фотография', 'терпение',1);
+
+INSERT INTO Student (n_stud,surname_s, name_s, lastname_s, education, date_s, phone_s, e_mail, genre, name_art, n_staff)
+VALUES (8, 'Дроздова','Анастасия', 'Павловна', 'КГЭУ', '1999-01-23', '+7 (555) 115-34-92', 'droz_d@yandex.ru', 'живопись', 'свобода',1);
+
+INSERT INTO Student (n_stud,surname_s, name_s, lastname_s, education, date_s, phone_s, e_mail, genre, name_art, n_staff)
+VALUES (9, 'Иванов','Глеб', 'Андреевич', 'КФУ', '1998-05-22', '+7 (991) 115-15-92', 'gleeeb_i@yandex.ru', 'цифровое искусство', 'вход',1);
+
+INSERT INTO Student (n_stud,surname_s, name_s, lastname_s, education, date_s, phone_s, e_mail, genre, name_art, n_staff)
+VALUES (10, 'Смирнов','Максим', 'Леонидович', 'КГЭУ', '1999-08-12', '+7 (031) 115-33-92', 'maks__s@yandex.ru', 'рисунок', 'настроение',1);
+
+INSERT INTO Student (n_stud,surname_s, name_s, lastname_s, education, date_s, phone_s, e_mail, genre, name_art, n_staff)
+VALUES (11, 'Суворов','Никита', 'Константинович', 'КАЗГИК', '1999-04-19', '+7 (991) 115-15-92', 'nikitos@yandex.ru', 'живопись', 'дно',1);
+
+INSERT INTO Student (n_stud,surname_s, name_s, lastname_s, education, date_s, phone_s, e_mail, genre, name_art, n_staff)
+VALUES (12, 'Хуснутдинов','Азат', 'Гафурович', 'КНИТУ-КАИ', '1999-09-25', '+7 (881) 105-15-92', 'azaaat@yandex.ru', 'смешанная техника', 'искусство',1);
+
+INSERT INTO Student (n_stud,surname_s, name_s, lastname_s, education, date_s, phone_s, e_mail, genre, name_art, n_staff)
+VALUES (13, 'Червоненко','Александр', 'Михайлович', 'КФУ', '1998-10-05', '+7 (001) 105-19-92', 'aleeex@yandex.ru', 'цифровое искусство', 'будущее',1);
+
+INSERT INTO Student (n_stud,surname_s, name_s, lastname_s, education, date_s, phone_s, e_mail, genre, name_art, n_staff)
+VALUES (14, 'Шурыкин','Вадим', 'Александрович', 'КНИТУ-КХТИ', '1999-10-10', '+7 (331) 105-19-92', 'vadikkk@yandex.ru', 'цифровое искусство', 'огонь',1);
+
+INSERT INTO Student (n_stud,surname_s, name_s, lastname_s, education, date_s, phone_s, e_mail, genre, name_art, n_staff)
+VALUES (15, 'Данилов','Никита', 'Иванович', 'КНИТУ-КХТИ', '1999-11-05', '+7 (777) 105-19-92', 'rooock@yandex.ru', 'фотография', 'ангел',1);
+
+INSERT INTO Student (n_stud,surname_s, name_s, lastname_s, education, date_s, phone_s, e_mail, genre, name_art, n_staff)
+VALUES (16, 'Черный','Степан', 'Валерьевич', 'КГАСУ', '1999-10-14', '+7 (001) 105-19-92', 'korgi@yandex.ru', 'фотография', 'women',2);
+
+INSERT INTO Student (n_stud,surname_s, name_s, lastname_s, education, date_s, phone_s, e_mail, genre, name_art, n_staff)
+VALUES (17, 'Фатхутдинова','Альмира', 'Альбертовна', 'КНИТУ-КАИ', '1999-01-06', '+7 (789) 105-19-93', 'f_almirax@yandex.ru', 'фотография', 'мгновение',2);
+
+INSERT INTO Student (n_stud,surname_s, name_s, lastname_s, education, date_s, phone_s, e_mail, genre, name_art, n_staff)
+VALUES (18, 'Бадертдинова','Элина', 'Элиновна', 'КГАСУ', '1999-10-05', '+7 (241) 105-09-00', 'badert@yandex.ru', 'фотография', 'вата',2);
+
+INSERT INTO Student (n_stud,surname_s, name_s, lastname_s, education, date_s, phone_s, e_mail, genre, name_art, n_staff)
+VALUES (19, 'Салеев','Рамиль', 'Русланович', 'КАЗГИК', '1998-09-05', '+7 (001) 105-19-92', 'saleev_r@yandex.ru', 'смешанная техника', 'безумным можно быть..',2);
+
+INSERT INTO Student (n_stud,surname_s, name_s, lastname_s, education, date_s, phone_s, e_mail, genre, name_art, n_staff)
+VALUES (20, 'Орлова','Софья', 'Андреевна', 'КГАСУ', '1998-10-04', '+7 (001) 165-20-92', 's__or@yandex.ru', 'живопись','материнская любовь',2);
+
+INSERT INTO Student (n_stud,surname_s, name_s, lastname_s, education, date_s, phone_s, e_mail, genre, name_art, n_staff)
+VALUES (21, 'Седин','Роман', 'Олегович', 'КГАСУ', '1998-12-05', '+7 (897) 105-19-02', 'sedoooi@yandex.ru', 'фотография', 'дистанционка',2);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
